@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;Springcore.jdbc&apos; to &apos;com.springcore.jdbc&apos;&#x0D;&#x0A;- Original element: &apos;Springcore.jdbc&apos;&#x0D;&#x0A;- Renamed element: &apos;Springcore.jdbc&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;Springcore.jdbc&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=Springcore.jdbc" name="com.springcore.jdbc" references="true" stamp="1691033640135" version="1.0"/>
+</session>

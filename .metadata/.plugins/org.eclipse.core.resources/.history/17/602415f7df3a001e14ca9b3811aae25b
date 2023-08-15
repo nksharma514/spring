@@ -1,0 +1,5 @@
+package com.springmvc.search;
+
+public class SearchController {
+
+}

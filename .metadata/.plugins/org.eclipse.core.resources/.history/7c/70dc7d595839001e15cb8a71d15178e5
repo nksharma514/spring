@@ -1,0 +1,75 @@
+package springmvc.controller;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController {
+	
+	@RequestMapping("/home")
+	public String home(Model model) {		
+		System.out.println("This is home url, Spring MVC is working fine");	
+		
+		model.addAttribute("name", "Narendra Sharma");
+		model.addAttribute("Id", "9874");
+		
+//		List<String> friend = new ArrayList<>();
+//		friend.add("Suman");
+//		friend.add("Sushmita");
+//		friend.add("Shyam");
+//		friend.add("Shivansh");
+//		
+//		model.addAttribute("f", "friend");
+		
+		return "index";
+	}
+	
+	
+	
+	@RequestMapping("/about")
+	public String about(Model model) {
+		System.out.println("This is all about me");
+		
+		model.addAttribute("place", "New Delhi");
+		return "about";
+	}
+	
+	
+	public ModelAndView date() {
+		
+		ModelAndView modelAndView = new ModelAndView();
+		
+		LocalDateTime date = LocalDateTime.now();
+		modelAndView.addObject("time", "date");
+		
+		return modelAndView;
+	}
+	
+	
+	
+	@RequestMapping("/help")
+	public ModelAndView help() {		
+		System.out.println("This is help page");
+		
+//		creating model and view object
+		ModelAndView modelAndView = new ModelAndView();
+		
+//		setting the data
+		modelAndView.addObject("name1", "Kiran");
+		modelAndView.addObject("place", "Kolkata");
+		
+//		setting the view name
+		modelAndView.setViewName("help");
+		
+		return modelAndView;
+	}
+	
+	
+
+}

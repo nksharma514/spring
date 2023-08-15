@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- This is our beans using setter injection to define -->
+
+	<bean class="com.springcore.collection.Employee" name="employee1">
+
+		<property name="name">
+			<value>Narendra Sharma</value>
+		</property>
+
+
+		<property name="phone">
+			<list>
+				<value>123456789</value>
+				<value>987456321</value>
+				<value>8802987405</value>
+				<value>7982198905</value>
+			</list>
+		</property>
+
+
+		<property name="address">
+			<set>
+				<value>New Delhi</value>
+				<value>Bihar</value>
+				<value>Sagarpur</value>
+			</set>
+		</property>
+
+
+		<property name="courses">
+			<map>
+				<entry key="java" value="2months" />
+				<entry key="Angula" value="1months" />
+				<entry key="SpringBoot" value="3months" />
+			</map>
+		</property>
+
+
+
+	</bean>
+
+</beans>

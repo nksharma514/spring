@@ -1,0 +1,27 @@
+package com.spring.mvc.formRegistration.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class StudentController {
+	
+	@RequestMapping(path = "/processform", method = RequestMethod.POST)
+	public String formController
+			(
+//				@RequestParam("studentEmail") String email,
+//				@RequestParam("studentName") String name,
+//				@RequestParam("studentPassword") String password
+			){
+		
+//		System.out.println("User Email is " + email);
+//		System.out.println("User Name is " + name);
+//		System.out.println("User Password is " + password);
+		
+		return "student";
+	}
+
+}

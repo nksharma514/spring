@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- This is our beans using setter injection to define -->
+
+	<bean class="com.springcore.reference.B" name="b-ref">
+		<property name="y" value="90" />
+	</bean>
+
+	<bean class="com.springcore.reference.A" name="a-ref">
+		<property name="x" value="13" />
+
+		<property name="obj">
+			<ref bean="b-ref" />
+		</property>
+	</bean>
+
+</beans>
